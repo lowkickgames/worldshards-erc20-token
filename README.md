@@ -1,0 +1,1 @@
+# worldshards-erc20-token
