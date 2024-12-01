@@ -7,7 +7,7 @@ async function main() {
     
     console.log("Account balance:", (await ethers.utils.formatEther(weiAmount)));
   
-    const Token = await ethers.getContractFactory("WorldShardsTest");
+    const Token = await ethers.getContractFactory("WorldShardsToken");
     const args = [
       "World Shards",
       "SHARDS",
