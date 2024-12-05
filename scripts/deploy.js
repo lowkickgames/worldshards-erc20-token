@@ -9,7 +9,7 @@ async function main() {
   
     const Token = await ethers.getContractFactory("WorldShardsToken");
     const args = [
-      "World Shards",
+      "WorldShards",
       "SHARDS",
       5000000000,
       deployer.address
