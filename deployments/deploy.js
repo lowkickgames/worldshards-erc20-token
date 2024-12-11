@@ -3,9 +3,9 @@ async function main() {
   
     console.log("Deploying contracts with the account:", deployer.address);
   
-    const weiAmount = (await deployer.getBalance()).toString();
+    const weiAmount = (await deployer.provider.getBalance(deployer.address)).toString();
     
-    console.log("Account balance:", (await ethers.utils.formatEther(weiAmount)));
+    console.log("Account balance:", (await ethers.formatEther(weiAmount)));
   
     const Token = await ethers.getContractFactory("WorldShardsToken");
     const args = [
