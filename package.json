@@ -1,10 +1,14 @@
 {
   "name": "worldshards-erc20-token",
   "version": "1.0.0",
-  "description": "",
+  "description": "WorldShards $SHARDS ERC-20 Token",
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowkickgames/worldshards-erc20-token.git"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +23,9 @@
   "dependencies": {
     "@openzeppelin/contracts": "^5.1.0",
     "dotenv": "^16.4.7"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/lowkickgames/worldshards-erc20-token/issues"
+  },
+  "homepage": "https://github.com/lowkickgames/worldshards-erc20-token#readme"
 }
