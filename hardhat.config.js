@@ -3,7 +3,6 @@ require("@nomicfoundation/hardhat-ethers");
 require("@nomicfoundation/hardhat-verify");
 require('dotenv').config();
 
-console.log(process.env)
 module.exports = {
   solidity: {
     compilers: [
