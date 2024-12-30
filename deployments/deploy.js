@@ -1,4 +1,9 @@
 async function main() {
+    if(!process.env.OWNER_ADDRESS) {
+      console.error('OWNER ADDRESS env var missing')
+      process.exit(1)
+    }
+  
     const [deployer] = await ethers.getSigners();
   
     console.log("Deploying contracts with the account:", deployer.address);
@@ -12,7 +17,7 @@ async function main() {
       "WorldShards",
       "SHARDS",
       5000000000,
-      deployer.address
+      process.env.OWNER_ADDRESS
     ]
     const token = await Token.deploy(...args);
   
