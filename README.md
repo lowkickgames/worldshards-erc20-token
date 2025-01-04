@@ -10,6 +10,34 @@ The token is deployed to the multi-signature wallet with address [eth:0xdf00F45f
 
 For more information, please visit [official wiki page](https://wiki.worldshards.online/usdshards-token).
 
+## Installation and Dependencies
+
+This project is set up to be compiled using Hardhat development environment and [Alchemy](https://www.alchemy.com/) as Provider.
+
+1. Install or upgrade Node.js to supported version.
+To compile the project one need to install supported version of Node.js. Hardhat have [detailed guide on how to install or upgrade Node.js.](https://hardhat.org/tutorial/setting-up-the-environment)\
+More information about supported versions of Node.js can be found in [this documentation](https://hardhat.org/hardhat-runner/docs/reference/stability-guarantees#node.js-versions-support).
+
+2. Clone or download this repository.
+
+3. Install dependencies.
+Go to downloaded folder and run on terminal:
+
+```sh
+npm install
+```
+
+4. Set up environment variables.
+
+Create an `.env` file with environment variables. Template file `.env.example` is provided for convenience.
+
+```
+DEPLOYER_PRIVATE_KEY= // Wallet private key. This account initiates deployment process and pays gas fees.
+ETHERSCAN_API_KEY= // Etherscan API key to verify contracts.
+ALCHEMY_KEY= // Alchemy key for the selected network.
+DEPLOY_ADDRESS= // The address of the account to deploy token to.
+```
+
 ## Contract Compilation
 
 Run the compilation for the contract
@@ -20,17 +48,19 @@ npx hardhat compile
 
 ## Deployment
 
-Run the deployment for the token on testnet
+Run the deployment for the token on Ethereum testnet
 
 ```shell
 npx hardhat run deployments/deploy.js --network sepolia
 ```
 
-Run the deployment for the token on mainnet
+Run the deployment for the token on Ethereum mainnet
 
 ```shell
 npx hardhat run deployments/deploy.js --network mainnet
 ```
+
+ERC20 contract address will be printed to terminal.
 
 ## Testing
 
@@ -42,13 +72,13 @@ npx hardhat test
 
 ## Contract Validation
 
-Validate token contract on testnet
+Validate token contract on Ethereum testnet
 
 ```shell
 npx hardhat verify --contract contracts/WorldShardsToken.sol:WorldShardsToken --network sepolia {Contract Address} "WorldShards" 'SHARDS' 5000000000 {Wallet Address}
 ```
 
-Validate token contract on mainnet
+Validate token contract on Ethereum mainnet
 
 ```shell
 npx hardhat verify --contract contracts/WorldShardsToken.sol:WorldShardsToken --network mainnet {Contract Address} "WorldShards" 'SHARDS' 5000000000 {Wallet Address}

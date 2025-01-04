@@ -8,8 +8,8 @@ contract WorldShardsToken is ERC20 {
         string memory _name,
         string memory _symbol,
         uint _totalSupply,
-        address _owner
+        address _deployAddress
     ) ERC20(_name, _symbol) {
-        _mint(_owner, _totalSupply * 10 ** decimals());
+        _mint(_deployAddress, _totalSupply * 10 ** decimals());
     }
 }

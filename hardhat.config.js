@@ -3,6 +3,10 @@ require("@nomicfoundation/hardhat-ethers");
 require("@nomicfoundation/hardhat-verify");
 require('dotenv').config();
 
+const privateKey = process.env.DEPLOYER_PRIVATE_KEY;
+const alchemyKey = process.env.ALCHEMY_KEY;
+const etherscanApiKey = process.env.ETHERSCAN_API_KEY;
+
 module.exports = {
   solidity: {
     compilers: [
@@ -19,20 +23,20 @@ module.exports = {
   },
   networks: {
     sepolia: {
-      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.SEPOLIA_API_KEY}`,
-      accounts: [process.env.METAMASK_SECRET_KEY],
+      url: `https://eth-sepolia.g.alchemy.com/v2/${alchemyKey}`,
+      accounts: [privateKey],
       gasPrice: 100000000000
     },
     mainnet: {
-      url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.MAINNET_API_KEY}`,
-      accounts: [process.env.METAMASK_SECRET_KEY],
+      url: `https://eth-mainnet.g.alchemy.com/v2/${alchemyKey}`,
+      accounts: [privateKey],
       gasPrice: 100000000000
     },
   },
   etherscan: {
     apiKey: {
-      mainnet: process.env.ETHERSCAN_API_KEY, // API key for Etherscan (Mainnet)
-      sepolia: process.env.ETHERSCAN_API_KEY, // API key for Etherscan (Sepolia)
+      mainnet: etherscanApiKey, // API key for Etherscan (Mainnet)
+      sepolia: etherscanApiKey, // API key for Etherscan (Sepolia)
     },
   },
   sourcify: {
