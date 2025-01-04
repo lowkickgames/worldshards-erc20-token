@@ -23,8 +23,9 @@ async function main() {
       deployAddress
     ]
     const token = await Token.deploy(...args);
+    await token.waitForDeployment()
 
-    console.log("Token address:", token.address);
+    console.log(`Deployed contract to: ${token.target}`);
   }
 
 main()
