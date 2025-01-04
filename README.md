@@ -14,24 +14,32 @@ For more information, please visit [official wiki page](https://wiki.worldshards
 
 This project is set up to be compiled using Hardhat development environment and [Alchemy](https://www.alchemy.com/) as Provider.
 
-1. Install or upgrade Node.js to supported version.
+### 1. Install or upgrade Node.js
+
 To compile the project one need to install supported version of Node.js. Hardhat have [detailed guide on how to install or upgrade Node.js.](https://hardhat.org/tutorial/setting-up-the-environment)\
 More information about supported versions of Node.js can be found in [this documentation](https://hardhat.org/hardhat-runner/docs/reference/stability-guarantees#node.js-versions-support).
 
-2. Clone or download this repository.
+### 2. Clone or download this repository
 
-3. Install dependencies.
-Go to downloaded folder and run on terminal:
+Use Git to clone this repository or download a ZIP file with latest version.
+
+Docs:\
+[How to clone a repository using Git](https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository#cloning-a-repository).\
+[How to download a ZIP file](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives-from-the-repository-view).
+
+### 3. Install dependencies
+
+Go to project folder and run in terminal:
 
 ```sh
 npm install
 ```
 
-4. Set up environment variables.
+### 4. Set up environment variables
 
 Create an `.env` file with environment variables. Template file `.env.example` is provided for convenience.
 
-```
+```text
 DEPLOYER_PRIVATE_KEY= // Wallet private key. This account initiates deployment process and pays gas fees.
 ETHERSCAN_API_KEY= // Etherscan API key to verify contracts.
 ALCHEMY_KEY= // Alchemy key for the selected network.
