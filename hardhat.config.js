@@ -32,6 +32,14 @@ module.exports = {
       accounts: [privateKey],
       gasPrice: 100000000000
     },
+    bscTestnet: {
+      url: "https://data-seed-prebsc-2-s1.bnbchain.org:8545",
+      accounts: [privateKey],
+    },
+    bsc: {
+      url: "https://bsc-dataseed.binance.org/",
+      accounts: [privateKey],
+    },
   },
   etherscan: {
     apiKey: {
