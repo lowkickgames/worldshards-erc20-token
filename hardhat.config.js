@@ -43,15 +43,15 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      mainnet: etherscanApiKey, // API key for Etherscan (Mainnet)
-      sepolia: etherscanApiKey, // API key for Etherscan (Sepolia)
+      mainnet: etherscanApiKey,
+      sepolia: etherscanApiKey,
+      bscTestnet: etherscanApiKey,
+      bsc: etherscanApiKey,
     },
   },
   sourcify: {
-    enabled: true,
-    // Optional: specify a different Sourcify server
+    enabled: false,
     apiUrl: "https://sourcify.dev/server",
-    // Optional: specify a different Sourcify repository
     browserUrl: "https://repo.sourcify.dev",
   }
 };
